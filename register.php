@@ -110,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                     <div class="mb-3 form-check">
                                         <input type="checkbox" class="form-check-input" id="terms" name="terms" required>
-                                        <label class="form-check-label" for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                                        <label class="form-check-label" for="terms">I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms of Service</a> and <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a></label>
                                     </div>
 
                                     <div class="d-grid">

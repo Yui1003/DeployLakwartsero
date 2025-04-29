@@ -46,7 +46,7 @@
                     <address>
                         <p><i class="fas fa-map-marker-alt me-2"></i>CV38+C99, Rosario, Cavite</p>
                         <p><i class="fas fa-phone-alt me-2"></i> +63999-791-4791</p>
-                        <p><i class="fas fa-envelope me-2"></i>lakwatsero.travels@gmail.com</p>
+                        <p><i class="fas fa-envelope me-2"></i> rc.jomarie.avecilla@cvsu.edu.ph</p>
                     </address>
                     <div class="newsletter">
                         <h6>Subscribe to our Newsletter</h6>
@@ -103,5 +103,6 @@
             }
         });
     </script>
+<?php include 'terms-privacy.php'; ?>
 </body>
 </html>
