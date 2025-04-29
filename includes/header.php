@@ -19,6 +19,9 @@ $currentPage = basename($_SERVER['PHP_SELF']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lakwartsero - Travel & Tourism Booking</title>
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.imgur.com/OCfGVa2.png">
+    
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     

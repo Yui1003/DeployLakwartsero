@@ -92,6 +92,44 @@ document.addEventListener('DOMContentLoaded', function() {
         return new bootstrap.Tooltip(tooltipTriggerEl);
     });
 
+    // Initialize all modals
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+        new bootstrap.Modal(modal);
+    });
+
+    // Newsletter subscription
+    const newsletterForm = document.querySelector('.newsletter .input-group');
+    if (newsletterForm) {
+        const emailInput = newsletterForm.querySelector('input[type="email"]');
+        const subscribeBtn = newsletterForm.querySelector('button');
+        
+        subscribeBtn.addEventListener('click', function() {
+            const email = emailInput.value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (emailPattern.test(email)) {
+                alert('Subscribed!');
+                emailInput.value = '';
+            } else {
+                alert('Please enter a valid email address');
+            }
+        });
+    }
+
+    // Cookie consent
+    if (!localStorage.getItem('cookieConsent')) {
+        const cookieConsent = document.getElementById('cookieConsent');
+        if (cookieConsent) {
+            cookieConsent.classList.add('show');
+        }
+    }
+
+    document.getElementById('acceptCookies')?.addEventListener('click', () => {
+        localStorage.setItem('cookieConsent', 'accepted');
+        document.getElementById('cookieConsent').classList.remove('show');
+    });
+
     // Package booking form functionality
     const bookingForm = document.getElementById('bookingForm');
     if (bookingForm) {

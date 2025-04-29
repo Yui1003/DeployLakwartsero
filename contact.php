@@ -81,8 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                         <div class="contact-info-text">
                             <h4>Email Address</h4>
-                            <p>rc.jomarie.avecilla@cvsu.edu.ph</p>
-                            <p>rc.maurice.montano@cvsu.edu.ph</p>
+                            <p>travels@lakwartsero.com</p>
                         </div>
                     </div>
                     
@@ -101,10 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="contact-social">
                         <h4>Connect With Us</h4>
                         <div class="social-links">
-                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.facebook.com/share/19PeMv4xia/" class="social-link"><i class="fab fa-facebook-f"></i></a>
                         </div>
                     </div>
                 </div>
@@ -144,7 +140,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="privacy" required>
-                            <label class="form-check-label" for="privacy">I agree to the <a href="#">Privacy Policy</a> and consent to having my data processed.</label>
+                            <label class="form-check-label" for="privacy">I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a> and consent to having my data processed.</label>
                         </div>
                         
                         <div class="text-end">
