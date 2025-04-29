@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4 mb-md-0">
-                    <h5 class="footer-heading"><i class="fa-solid fa-tree-city"></i> Lakwartsero</h5>
+                    <h5 class="footer-heading"><i class="fa-solid fa-tree"></i>  Lakwartsero</h5>
                     <p>Your ultimate travel companion. We help you discover the world's most amazing destinations and create unforgettable experiences.</p>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/share/19PeMv4xia/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
