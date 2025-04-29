@@ -12,6 +12,20 @@ if (!isOperator() && !isAdmin()) {
 // Get package ID
 $packageId = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
+// First check if there are any bookings for this package
+$checkBookings = "SELECT COUNT(*) as booking_count FROM bookings WHERE package_id = ?";
+$stmt = $conn->prepare($checkBookings);
+$stmt->bind_param("i", $packageId);
+$stmt->execute();
+$result = $stmt->get_result();
+$bookingCount = $result->fetch_assoc()['booking_count'];
+
+if ($bookingCount > 0) {
+    $redirectUrl = isAdmin() ? "admin-dashboard.php" : "operator-dashboard.php";
+    header("Location: " . $redirectUrl . "?error=has_bookings");
+    exit;
+}
+
 // Verify package exists and user has permission
 $sql = "SELECT created_by FROM packages WHERE id = ?";
 $stmt = $conn->prepare($sql);

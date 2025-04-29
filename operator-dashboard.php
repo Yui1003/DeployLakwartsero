@@ -9,11 +9,20 @@ include 'includes/header.php';
 // Get operator ID
 $operatorId = $_SESSION['user_id'];
 
-// Get operator's packages
-$operatorPackages = getOperatorPackages($conn, $operatorId);
+// Get all packages
+$operatorPackages = getAllPackages($conn);
 
-// Get operator's bookings
-$operatorBookings = getOperatorBookings($conn, $operatorId);
+// Get all bookings
+$sql = "SELECT b.*, u.full_name, p.title as package_title 
+        FROM bookings b 
+        JOIN users u ON b.user_id = u.id 
+        JOIN packages p ON b.package_id = p.id 
+        ORDER BY b.created_at DESC";
+$result = $conn->query($sql);
+$operatorBookings = [];
+while($row = $result->fetch_assoc()) {
+    $operatorBookings[] = $row;
+}
 
 // Get statistics
 $totalOperatorPackages = count($operatorPackages);
@@ -115,12 +124,30 @@ $allDestinations = getAllDestinations($conn);
                                     </select>
                                 </td>
                                 <td>
+                                    <?php if ($package['created_by'] == $operatorId): ?>
                                     <a href="edit-package.php?id=<?php echo $package['id']; ?>" class="btn btn-sm btn-primary">
                                         <i class="fas fa-edit"></i> Edit
                                     </a>
-                                    <a href="delete-package.php?id=<?php echo $package['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this package?')">
+                                    <a href="#" class="btn btn-sm btn-danger" onclick="checkPackageBookings(<?php echo $package['id']; ?>)">
                                         <i class="fas fa-trash"></i> Delete
                                     </a>
+                                    <?php else: ?>
+                                    <span class="text-muted">Not owner</span>
+                                    <?php endif; ?>
+
+                                    <script>
+                                    function checkPackageBookings(packageId) {
+                                        fetch(`check-bookings.php?package_id=${packageId}`)
+                                            .then(response => response.json())
+                                            .then(data => {
+                                                if (data.has_bookings) {
+                                                    alert('This package cannot be deleted because it has existing bookings.');
+                                                } else if (confirm('Are you sure you want to delete this package?')) {
+                                                    window.location.href = `delete-package.php?id=${packageId}`;
+                                                }
+                                            });
+                                    }
+                                    </script>
                                 </td>
                             </tr>
                             <?php endforeach; ?>

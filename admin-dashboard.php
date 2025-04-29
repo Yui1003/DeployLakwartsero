@@ -178,7 +178,7 @@ if (isset($_GET['mark_read']) && isset($_GET['message_id'])) {
                             <?php endforeach; ?>
                         </div>
                         <div class="text-end mt-3">
-                            
+
                         </div>
                         <?php else: ?>
                         <div class="alert alert-info">No package data available.</div>
@@ -257,14 +257,33 @@ if (isset($_GET['mark_read']) && isset($_GET['message_id'])) {
                                     <a href="edit-destination.php?id=<?php echo $destination['id']; ?>" class="btn btn-sm btn-primary">
                                         <i class="fas fa-edit"></i> Edit
                                     </a>
-                                    <a href="delete-destination.php?id=<?php echo $destination['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this destination? This will also delete all related packages and attractions.')">
+                                    <a href="#" class="btn btn-sm btn-danger" onclick="checkDestinationPackages(<?php echo $destination['id']; ?>)">
                                         <i class="fas fa-trash"></i> Delete
                                     </a>
-                                </td>
+                                    </td>
                             </tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>
+
+                    <!-- Delete Confirmation Modal -->
+                    <div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Confirm Deletion</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p id="deleteConfirmMessage" class="mb-0"></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Yes, Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -311,9 +330,52 @@ if (isset($_GET['mark_read']) && isset($_GET['message_id'])) {
                                             <a href="edit-package.php?id=<?php echo $package['id']; ?>" class="btn btn-sm btn-primary">
                                                 <i class="fas fa-edit"></i> Edit
                                             </a>
-                                            <a href="delete-package.php?id=<?php echo $package['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this package?')">
+                                            <a href="#" class="btn btn-sm btn-danger" onclick="checkPackageBookings(<?php echo $package['id']; ?>)">
                                                 <i class="fas fa-trash"></i> Delete
                                             </a>
+
+                                            <script>
+function checkPackageBookings(packageId) {
+    fetch(`check-bookings.php?package_id=${packageId}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.has_bookings) {
+                alert('This package cannot be deleted because it has existing bookings.');
+            } else if (confirm('Are you sure you want to delete this package?')) {
+                window.location.href = `delete-package.php?id=${packageId}`;
+            }
+        });
+}
+
+function checkDestinationPackages(destinationId) {
+    fetch(`check-bookings.php?destination_id=${destinationId}&check_all=true`)
+        .then(response => response.json())
+        .then(data => {
+            const modal = new bootstrap.Modal(document.getElementById('deleteConfirmModal'));
+            const modalMessage = document.getElementById('deleteConfirmMessage');
+            const confirmButton = document.getElementById('confirmDeleteBtn');
+            
+            if (data.has_bookings) {
+                modalMessage.textContent = `Cannot delete this destination as it has packages with existing bookings.`;
+                confirmButton.style.display = 'none';
+            } else if (data.has_packages) {
+                modalMessage.textContent = `This destination has associated packages. Are you sure you want to delete it?`;
+                confirmButton.style.display = 'block';
+                confirmButton.onclick = () => deleteDestination(destinationId);
+            } else {
+                modalMessage.textContent = `Are you sure you want to delete this destination?`;
+                confirmButton.style.display = 'block';
+                confirmButton.onclick = () => deleteDestination(destinationId);
+            }
+            
+            modal.show();
+        });
+}
+
+function deleteDestination(destinationId) {
+    window.location.href = `delete-destination.php?id=${destinationId}&confirm=yes`;
+}
+</script>
                                         </td>
                                     </tr>
                                     <?php endforeach; ?>

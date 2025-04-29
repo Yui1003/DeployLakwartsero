@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 <!-- Page Header -->
-<section class="page-header" style="background-image: url('https://images.unsplash.com/photo-1596713102968-7023deed5451');">
+<section class="page-header" style="background-image: url('https://images.unsplash.com/uploads/1413222992504f1b734a6/1928e537?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
     <div class="container">
         <h1 data-aos="fade-up">Contact Us</h1>
         <p data-aos="fade-up" data-aos-delay="100">Get in touch with our travel experts</p>

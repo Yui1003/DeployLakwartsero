@@ -1,3 +1,45 @@
+
+// Destination management functions
+function checkDestinationPackages(destinationId) {
+    fetch(`check-packages.php?destination_id=${destinationId}`)
+        .then(response => response.json())
+        .then(data => {
+            const warningDiv = document.getElementById(`warning-${destinationId}`);
+            const warningMessage = warningDiv.querySelector('.warning-message');
+            
+            if (data.package_count > 0) {
+                warningMessage.textContent = `This destination has ${data.package_count} associated package(s). Are you sure you want to delete it?`;
+                warningDiv.style.display = 'block';
+            } else {
+                if (confirm('Are you sure you want to delete this destination?')) {
+                    deleteDestination(destinationId);
+                }
+            }
+        });
+}
+
+function hideWarning(destinationId) {
+    document.getElementById(`warning-${destinationId}`).style.display = 'none';
+}
+
+function deleteDestination(destinationId) {
+    fetch(`delete-destination.php?id=${destinationId}&confirm=yes`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Remove the destination row from the table
+                const row = document.querySelector(`tr[data-destination-id="${destinationId}"]`);
+                if (row) {
+                    row.remove();
+                }
+                showToast('Destination deleted successfully', 'success');
+            } else {
+                showToast(data.message || 'Error deleting destination', 'error');
+            }
+        });
+}
+
+
 document.addEventListener('DOMContentLoaded', function() {
     // Handle package status changes
     document.querySelectorAll('.package-status-select').forEach(select => {

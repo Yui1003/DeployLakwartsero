@@ -4,7 +4,7 @@ include 'includes/header.php';
 ?>
 
 <!-- Page Header -->
-<section class="page-header" style="background-image: url('https://images.unsplash.com/photo-1596713102968-7023deed5451');">
+<section class="page-header" style="background-image: url('https://images.unsplash.com/photo-1551590192-8070a16d9f67?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
     <div class="container">
         <h1 data-aos="fade-up">About Us</h1>
         <p data-aos="fade-up" data-aos-delay="100">Learn more about Lakwartsero Travel & Tourism</p>
