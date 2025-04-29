@@ -39,7 +39,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.php">
-                <img src="https://i.imgur.com/GSy8SV7.png" alt="Lakwartsero Logo" style="height: 30px; margin-right: 5px;"> Lakwartsero
+                <img src="https://i.imgur.com/OCfGVa2.png" alt="Lakwartsero Logo" style="height: 30px; margin-right: 5px;"> Lakwartsero
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

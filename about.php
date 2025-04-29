@@ -16,7 +16,7 @@ include 'includes/header.php';
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 order-lg-2" data-aos="fade-left">
-                <img src="https://images.unsplash.com/photo-1605130284535-11dd9eedc58a" alt="About Lakwartsero" class="img-fluid rounded">
+                <img src="https://homeiswhereyourbagis.b-cdn.net/wp-content/uploads/2019/04/artikelbild-welcome-philippines.jpg" alt="About Lakwartsero" class="img-fluid rounded">
             </div>
             <div class="col-lg-6 order-lg-1" data-aos="fade-right">
                 <div class="about-content">
@@ -109,55 +109,88 @@ include 'includes/header.php';
         </div>
         
         <div class="row">
-            <div class="col-md-4" data-aos="fade-up">
+            <div class="col-md-4 mx-auto" data-aos="fade-up">
                 <div class="team-card">
                     <div class="team-img">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a" alt="Juan Dela Cruz">
+                        <img src="https://i.imgur.com/xgTL24e.jpeg" alt="Founder CEO">
                     </div>
                     <div class="team-content">
-                        <h3>Juan Dela Cruz</h3>
+                        <h3>Engr. MJ Prudente</h3>
                         <div class="team-position">Founder & CEO</div>
-                        <p>With over 15 years in the travel industry, Juan's vision and leadership have been instrumental in Wanderlust's growth and success.</p>
+                        <p>In his short span of job in CvSU CCAT - his vision and leadership have been instrumental in Lakwartsero's growth and success.</p>
                         <div class="team-social">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.facebook.com/z00mj#"><i class="fab fa-facebook-f"></i></a>
+                         <!--   <a href="#"><i class="fa-brands fa-github"></i></a> !-->
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-md-3" data-aos="fade-up">
                 <div class="team-card">
                     <div class="team-img">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2" alt="Maria Santos">
+                        <img src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t1.15752-9/494688573_1642825263088911_3611262452840175027_n.png?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=J72o1t6BVDAQ7kNvwFdbngt&_nc_oc=Adn6LjxPeFXCi0t2tZnb1JJlKi8xngHsoIdMUW5_t6_Z6JYZ3EN9znehqxc8t7cpbCU&_nc_zt=23&_nc_ht=scontent.fmnl13-1.fna&oh=03_Q7cD2AGQPX3WoEcY5sI59cmyzsKkatp1B4-Gmi2FQO5aGOWEng&oe=68380DA6" alt="Tour Operations Manager">
                     </div>
                     <div class="team-content">
-                        <h3>Maria Santos</h3>
+                        <h3>Maurice Montano</h3>
                         <div class="team-position">Tour Operations Manager</div>
-                        <p>Maria ensures that every tour runs smoothly and exceeds travelers' expectations with her attention to detail and vast knowledge of destinations.</p>
+                        <p>Maurice ensures that every tour runs smoothly and exceeds travelers' expectations.</p>
                         <div class="team-social">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.facebook.com/maurice.montano08#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://github.com/ZythTheCode"><i class="fa-brands fa-github"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
                 <div class="team-card">
                     <div class="team-img">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7" alt="Carlos Reyes">
+                        <img src="https://i.imgur.com/OU1Alo0.png" alt="Marketing Director">
                     </div>
                     <div class="team-content">
-                        <h3>Carlos Reyes</h3>
-                        <div class="team-position">Customer Experience Director</div>
-                        <p>Carlos leads our customer service team, ensuring that every traveler receives personalized support and assistance throughout their journey.</p>
+                        <h3>Austin Rodriguez</h3>
+                        <div class="team-position">Marketing Director</div>
+                        <p>Austin Roi leads our marketing initiatives to showcase the beauty of Philippine destinations.</p>
                         <div class="team-social">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.facebook.com/austinroi.rodriguez#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://github.com/YuuhoROIVOn"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="https://i.imgur.com/R5q5bg2.jpeg" alt="Customer Experience Director">
+                    </div>
+                    <div class="team-content">
+                        <h3>Hamidah Salem</h3>
+                        <div class="team-position">Customer Experience Director</div>
+                        <p>Hamidah ensures every traveler receives exceptional support throughout their journey.</p>
+                        <div class="team-social">
+                            <a href="https://www.facebook.com/hamidah.v.salem#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://github.com/hami-salem"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="https://i.imgur.com/BsatDbW.jpeg" alt="Technology Director">
+                    </div>
+                    <div class="team-content">
+                        <h3>Jomarie Avecilla</h3>
+                        <div class="team-position">Technology Director</div>
+                        <p>Jomarie oversees our digital platforms and technological innovations.</p>
+                        <div class="team-social">
+                            <a href="https://www.facebook.com/jomarie.avecilla/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://github.com/Yui1003"><i class="fa-brands fa-github"></i></a>
                         </div>
                     </div>
                 </div>
