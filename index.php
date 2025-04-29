@@ -25,7 +25,7 @@ $featuredPackages = getFeaturedPackages($conn);
                         </div>
                         <div class="col-md-4">
                             <div class="form-floating">
-                                <input type="date" class="form-control" id="dateInput" name="date">
+                                <input type="date" class="form-control" id="dateInput" name="date" placeholder="dd/mm/yyyy">
                                 <label for="dateInput">When?</label>
                             </div>
                         </div>

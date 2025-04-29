@@ -198,6 +198,15 @@ main {
     box-shadow: var(--box-shadow);
 }
 
+.hero-search-form input::placeholder {
+    color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+}
+
+.hero-search-form .form-floating > label {
+    color: rgba(0, 0, 0, 0.8);
+}
+
 .search-btn {
     height: 58px;
 }
