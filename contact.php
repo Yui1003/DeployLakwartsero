@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                         <div class="contact-info-text">
                             <h4>Email Address</h4>
-                            <p>j.jomarie1435@gmail.com</p>
+                            <p>rc.jomarie.avecilla@cvsu.edu.ph</p>
                             <p>rc.maurice.montano@cvsu.edu.ph</p>
                         </div>
                     </div>
@@ -196,7 +196,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                        We accept various payment methods including credit/debit cards (Visa, Mastercard, American Express), bank transfers, and popular e-wallets like GCash and PayMaya. All payments are processed securely through our trusted payment gateway partners.
+                        We accept various payment methods including credit/debit cards (Visa/Landbank) and popular e-wallet - GCash. All payments are processed securely through our trusted payment gateway partners.
                     </div>
                 </div>
             </div>

@@ -268,9 +268,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['booking_submit'])) {
                                     <ol>
                                         <li>Transfer to:
                                             <ul>
-                                                <li>Bank: BDO</li>
+                                                <li>Bank: Visa/Landbank</li>
                                                 <li>Account Name: Lakwartsero</li>
-                                                <li>Account Number: 1234567890</li>
+                                                <li>Account Number: 2717063355</li>
                                             </ul>
                                         </li>
                                         <li>Amount to transfer: <span class="payment-amount">PHP 0.00</span></li>

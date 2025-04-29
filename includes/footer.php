@@ -44,9 +44,9 @@
                 <div class="col-md-3">
                     <h5 class="footer-heading">Contact Us</h5>
                     <address>
-                        <p><i class="fas fa-map-marker-alt me-2"></i> General Trias City, Philippines</p>
+                        <p><i class="fas fa-map-marker-alt me-2"></i>CV38+C99, Rosario, Cavite</p>
                         <p><i class="fas fa-phone-alt me-2"></i> +63999-791-4791</p>
-                        <p><i class="fas fa-envelope me-2"></i> j.jomarie1435@gmail.com</p>
+                        <p><i class="fas fa-envelope me-2"></i> rc.jomarie.avecilla@cvsu.edu.ph</p>
                     </address>
                     <div class="newsletter">
                         <h6>Subscribe to our Newsletter</h6>
