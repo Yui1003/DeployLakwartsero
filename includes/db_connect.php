@@ -1,3 +1,4 @@
+
 <?php
 // Database connection using environment variables
 $servername = getenv('DB_HOST');
