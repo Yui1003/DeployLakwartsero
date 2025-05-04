@@ -1,0 +1,8 @@
+
+{
+    "name": "lakwartsero/travel-website",
+    "description": "Philippine Travel Website",
+    "require": {
+        "php": "^8.0"
+    }
+}
