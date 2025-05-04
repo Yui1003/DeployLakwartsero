@@ -1,10 +1,9 @@
-
 <?php
 // Database connection using environment variables
-$servername = getenv('DB_HOST');
-$username = getenv('DB_USER');
-$password = getenv('DB_PASS');
-$dbname = getenv('DB_NAME');
+$servername = getenv('DB_HOST') ?: 'localhost';
+$username = getenv('DB_USER') ?: 'root';
+$password = getenv('DB_PASS') ?: '';
+$dbname = getenv('DB_NAME') ?: 'travel_db';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
